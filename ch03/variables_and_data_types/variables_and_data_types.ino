@@ -40,10 +40,20 @@ char myArray1[5] = {'H', 'e', 'l', 'l', 'o'};
 
 char myString[4] = "byte";
 
-String myString3 = "This is the gospel"; // Variable initialization
+String myString3 = "this is the gospel, this is the good news"; // Variable initialization
+
+// charAt function returns a character at a particular position
 char myCharAt2 = myString3.charAt(2);
 
-int m indexAt8 = myString3.indexOf('t')
+// indexOf return the index at the first occurance of a character
+int myIndexOfT = myString3.indexOf('t');
+
+// supplying a start index to indexOf()
+int myIndexOfT2 = myString3.indexOf('t', 5);
+
+// lastIndexOf returns the last occurence of a value
+int myIndexOfT3 = myString3.lastIndexOf('t');
+
 
 
 void setup() {
@@ -52,7 +62,7 @@ void setup() {
 
 }
 
-void loop() {
+int printWait() {
   // put your main code here, to run repeatedly:
   Serial.println(myBool);
   Serial.println(myChar);
@@ -65,7 +75,17 @@ void loop() {
   Serial.println(myArray1);
   Serial.println(myString);
   Serial.println( myCharAt2);
-  
- 
+  Serial.println("Printing the index without giving a start index");
+  Serial.println(myIndexOfT);
+  Serial.println("Printing the index having supplied a start index");
+  Serial.println(myIndexOfT2);
+  Serial.println("Printing the lastIndexOf t");
+  Serial.println(myIndexOfT3);
+  delay(60000);
+  return 0;
+}
 
+void loop() {
+printWait();
+delay(60000);
 }
